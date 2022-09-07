@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 1</title>
+</head>
+<body>
+<h2><label>Enter Your Age</label></h2>
+<input id="enter" type="text" onclick="reset()">
+<button onclick="familyAge()">Click Here</button>
+<h3 id="???"></h3>
+<h3 id="tuoicuaanh"></h3>
+<h3 id="tuoicuabo"></h3>
+<script>
+    function reset() {
+        document.getElementById('???').innerText = ""
+        document.getElementById('tuoicuaanh').innerText = ""
+        document.getElementById('tuoicuabo').innerText = ""
+    }
+    function familyAge() {
+        let tuoiEm = +document.getElementById('enter').value
+        let tuoiAnh = tuoiEm+4
+        let tuoiBo = tuoiAnh*6
+        if(tuoiEm<=0){
+            document.getElementById('???').innerHTML = '???????'
+        }else{
+            document.getElementById('tuoicuaanh').innerHTML = 'Your Brother age is: '+tuoiAnh
+            document.getElementById('tuoicuabo').innerHTML = 'Your Dad age is: '+tuoiBo
+        }
+    }
+</script>
+</body>
+</html>
